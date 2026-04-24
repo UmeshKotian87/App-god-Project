@@ -1,0 +1,249 @@
+.medicine-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page-header.medicine-theme {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.page-header.medicine-theme h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.medicine-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+.med-panel {
+  padding: 1.5rem;
+}
+
+.add-med-form {
+  background-color: var(--hover-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.add-med-form .form-group {
+  flex: 1;
+  min-width: 150px;
+}
+
+.add-med-form input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  outline: none;
+}
+
+.btn-save {
+  padding: 0.75rem 1.5rem;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  height: 42px;
+}
+
+.med-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+  gap: 1rem;
+}
+
+.med-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background-color: var(--card-bg);
+  transition: all 0.2s ease;
+  gap: 1.5rem;
+}
+
+.med-item.taken {
+  opacity: 0.6;
+  background-color: var(--hover-bg);
+}
+
+.med-item.taken h4 {
+  text-decoration: line-through;
+}
+
+.med-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #3b82f6;
+  font-weight: 700;
+  font-size: 1.1rem;
+  min-width: 80px;
+  padding-right: 1.5rem;
+  border-right: 1px solid var(--border-color);
+}
+
+.med-details {
+  flex: 1;
+}
+
+.med-details h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.med-details p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.med-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-taken {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background-color: transparent;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-taken:hover {
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.btn-taken.active {
+  background-color: #10b981;
+  border-color: #10b981;
+  color: white;
+}
+
+.btn-delete {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  color: #ef4444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.2s ease;
+}
+
+.btn-delete:hover {
+  opacity: 1;
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.clock-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.text-blue { color: #3b82f6; }
+.text-yellow { color: #f59e0b; }
+
+.current-time {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.clock-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.alert-info {
+  padding: 1.5rem;
+}
+
+.info-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.info-header h4 {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.alert-info ul {
+  padding-left: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.alert-info li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .medicine-content {
+    grid-template-columns: 1fr;
+  }
+}
